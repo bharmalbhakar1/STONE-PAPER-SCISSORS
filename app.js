@@ -3,7 +3,6 @@ let yourscore = document.querySelector(".your");
 let compscore = document.querySelector(".comp");
 let reset = document.querySelector("#reset");
 let msgcont = document.querySelector(".msgcont");
-let comp = 0;
 let scoreyou = 0;
 let scorecomp = 0;
 const youwin = () => {
@@ -14,35 +13,37 @@ const compwin = () => {
     scorecomp ++;
     compscore.innerText = scorecomp;
 }
+const gencompchioce = () => {
+    const arr = ["stone", "paper", "scissor"];
+    let chioce = Math.floor(Math.random()*3);
+    return arr[chioce];
+}
 buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
         let currval = btn.name;
-        if(comp == 0){
+        let comp = gencompchioce();
+        if(comp == "stone"){
             if(currval == "paper"){
                 youwin();
             } else if (currval == "scissors") {
                 compwin();
             }
-            comp = 1;
-        } else if(comp == 1){
+        } else if(comp == "paper"){
             if(currval == "scissors"){
                 youwin();
             } else if (currval == "stone") {
                 compwin();
             }
-            comp = 2;
         } else {
             if(currval == "stone"){
                 youwin();
             } else if (currval == "paper") {
                 compwin();
             }
-            comp = 0;
         }
         if(scoreyou > scorecomp){
             msgcont.classList.remove("hide");
         } else {
-            msgcont.classList.add("hide");
         }
     })
 })

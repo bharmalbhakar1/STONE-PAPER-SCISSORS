@@ -24,11 +24,13 @@ body{
     gap: 10vmin;
 }
 .box{
-    height: 18vmin;
-    width: 18vmin;
+    height: 20vmin;
+    width: 20vmin;
     border-radius: 50%;
     border: none;
     box-shadow: 0 0 16px rgba(0,0,0,0.5);
+    object-fit: contain;
+    background-color: white;
 }
 .scorebox{
     height: 30vmin;  
@@ -43,10 +45,6 @@ body{
     width: 18vmin;
     font-size: 10vmin;
     color: brown;
-    border-radius: 2vmin;
-    border: none;
-    box-shadow: 0 0 16px rgba(0,0,0,0.5);
-    background-color: bisque;
 }
 #reset{
     margin-top: 5vmin;
@@ -85,4 +83,12 @@ body{
     align-items: center;
     flex-direction: column;
     height: 10vmin;
+}
+.box:hover{
+    cursor: pointer;
+    opacity: 0.5;
+}
+#reset:hover{
+    opacity: 0.5;
+    cursor: pointer;
 }
