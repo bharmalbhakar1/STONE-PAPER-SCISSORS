@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STONE-PAPER-SCISSORS GAME</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>STONE-PAPER-SCISSORS</h1>
+    <p style="font-size: 5vmin;">made by bhakar</p>
+    <div class="container">
+        <div class="game">
+            <button name = "stone" class="box" style="background-image: url(stone.jpg); background-size: cover;"></button>
+            <button name = "paper"class="box" style="background-image: url(paper.jpg); background-size: cover;"></button>
+            <button name = "scissors"class ="box" style="background-image: url(scissors.jpg); background-size: cover; background-repeat: no-repeat;"></button>
+        </div>
+    </div>
+    <div class = "conatiner2">
+        <div class= "scorebox">
+            <div class= "sbox">
+                <div class = "your score"> 0</div>
+                YOU</div>
+            <div class= "sbox">
+                <div class = "comp score">0</div>
+                COMP</div>
+        </div>
+    </div>
+    <div class="msgcont hide">
+        <div id = "msg"> Congratulations! You won</div>
+    </div>
+    <button id = "reset" >RESET GAME</button>
+</body>
+<script src="app.js"></script> 
+</html>
